@@ -14,7 +14,7 @@ function JSONParse(json) {
 	}
 }
 
-// ajax 커스텀
+// ajax 사용하기 쉽게 함수로 만듬
 function send() {	
 	switch (arguments.length) {
 	case 1:
@@ -64,8 +64,8 @@ function privateSend(uri, data, callback) {
 	        url : getAjaxPrefix() + "/"  + uri,
 	        type: "POST",
 	        cache : false,
-			crossDomain : true,
-			processData : false, 	// formData 전송시 필요
+		crossDomain : true,
+		processData : false, 	// formData 전송시 필요
 	        contentType : false, 	// formData 전송시 필요
 	        mimeType : "multipart/form-data",
 	        data: data,
